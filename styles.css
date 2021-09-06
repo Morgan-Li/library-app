@@ -1,0 +1,41 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#userInput{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#title{
+    display: flex;
+    margin: 0px 10px;
+}
+
+#author{
+    display: flex;
+    margin: 0px 10px;
+}
+
+#pages{
+    display: flex;
+    margin: 0px 10px;
+}
+
+#readBox{
+    display: flex;
+    margin: 3px 10px 0px 10px;
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+}
