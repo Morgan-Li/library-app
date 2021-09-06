@@ -33,7 +33,7 @@ function renderBook() {
 
 function buildBook(bookContainer) {
     const libraryContainer = document.querySelector("#bookcase");
-
+    
 
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
@@ -57,13 +57,6 @@ function buildBook(bookContainer) {
 
     var readCheckBox = document.createElement("input");
     readCheckBox.type = 'checkbox';
-
-    if(libraryContainer.read === false) {
-        readCheckBox.checked = true;
-    }
-    else {
-        readCheckBox.checked = false;
-    }
     readCheckBox.classList.add("readCheckBox");
 
     var label = document.createElement("label");
@@ -73,7 +66,11 @@ function buildBook(bookContainer) {
 
     bookDiv.appendChild(label);
     bookDiv.appendChild(readCheckBox);
-
+    if(bookContainer.read === true) {
+        readCheckBox.checked = true;
+    }else {
+        readCheckBox.checked = false;
+    }
 
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "X";
@@ -88,5 +85,3 @@ function buildBook(bookContainer) {
         renderBook();
     });
 }
-
-renderBook();
