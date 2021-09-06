@@ -39,3 +39,48 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+#bookcase {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.author {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.pages {
+    font-size: 15px;
+    margin: 10px;
+}
+
+.readLabel {
+    font-size: 15px;
+}
+
+#removeBtn {
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border-radius: 50%;
+}
