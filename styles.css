@@ -45,6 +45,10 @@ h1 {
     padding-bottom: 15px;
 }
 
+#submitBtn {
+    font-weight: bold;
+}
+
 #bookcase {
     display: flex;
     flex-flow: row wrap;

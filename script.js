@@ -17,6 +17,7 @@ function addBook() {
     event.preventDefault();
     newBook = new Book(title, author, pages, read);
     library.push(newBook);
+    saveLibrary();
     renderBook();
     form.reset();
 }
@@ -55,11 +56,11 @@ function buildBook(bookContainer) {
     bookDiv.appendChild(pageDiv);
 
 
-    var readCheckBox = document.createElement("input");
+    const readCheckBox = document.createElement("input");
     readCheckBox.type = 'checkbox';
     readCheckBox.classList.add("readCheckBox");
 
-    var label = document.createElement("label");
+    const label = document.createElement("label");
     label.htmlFor = "read ";
     label.classList.add("readLabel");
     label.appendChild(document.createTextNode("Read: "))
@@ -77,8 +78,10 @@ function buildBook(bookContainer) {
 
     removeBtn.addEventListener("click", () => {
         library.splice(library.indexOf(bookContainer), 1);
+        saveLibrary();
         renderBook();
     });
+
 }
 
 function setCheckBox(container, checkBox) {
@@ -88,3 +91,21 @@ function setCheckBox(container, checkBox) {
         checkBox.checked = false;
     }
 }
+
+function saveLibrary() {
+    localStorage.setItem("library", JSON.stringify(library));
+}
+
+function load() {
+    if(!localStorage.library) {
+        renderBook();
+    }
+    else {
+        let objects = localStorage.getItem("library");
+        objects = JSON.parse(objects);
+        library = objects;
+        renderBook();
+    }
+}
+
+load();
