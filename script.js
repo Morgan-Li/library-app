@@ -1,6 +1,8 @@
 let newBook;
 let library = [];
 
+// Book constructor
+
 class Book {
     constructor(title, author, pages, read) {
         this.title = form.title.value;
@@ -9,6 +11,8 @@ class Book {
         this.read = form.read.checked;
     }
 }
+
+//Checking if form is filled/valid
 
 function checkForm() {
     event.preventDefault();
@@ -20,6 +24,8 @@ function checkForm() {
         return true;
     }
 }
+
+//Event listener for complete form button
 
 const submitBtn = document.querySelector("#submitBtn");
 submitBtn.addEventListener("click", () => {
@@ -36,6 +42,8 @@ function addBook() {
     form.reset();
 }
 
+//Building the book, deletes and rebuilds library from updated array
+
 function renderBook() {
     const display = document.getElementById("bookcase");
     const books = document.querySelectorAll(".book");
@@ -46,9 +54,10 @@ function renderBook() {
     }
 }
 
+//Creating book from Javascript DOM elements
+
 function buildBook(bookContainer) {
     const libraryContainer = document.querySelector("#bookcase");
-
 
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
@@ -100,6 +109,9 @@ function buildBook(bookContainer) {
     }); 
 
 }
+
+
+// Saving to local storage using JSON
 
 function saveLibrary() {
     localStorage.setItem("library", JSON.stringify(library));
