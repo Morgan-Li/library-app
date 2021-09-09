@@ -9,3 +9,5 @@ Features:
 * Saves data/books to local storage using JSON
 
 * Editable library
+
+Live demo: https://morgan-li.github.io/library-app/
