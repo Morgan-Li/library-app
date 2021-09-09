@@ -10,8 +10,22 @@ class Book {
     }
 }
 
+function checkForm() {
+    event.preventDefault();
+    if(form.title.value == "" || form.author.value == "" || form.pages.value == "") {
+        alert("Please fill in all fields!")
+        return false;
+    } 
+    else {
+        return true;
+    }
+}
+
 const submitBtn = document.querySelector("#submitBtn");
-submitBtn.addEventListener("click", addBook);
+submitBtn.addEventListener("click", () => {
+    if(checkForm() == false) return;
+    addBook();
+});
 
 function addBook() {
     event.preventDefault();
@@ -55,19 +69,16 @@ function buildBook(bookContainer) {
     pageDiv.classList.add("pages");
     bookDiv.appendChild(pageDiv);
 
-
-    const readCheckBox = document.createElement("input");
-    readCheckBox.type = 'checkbox';
-    readCheckBox.classList.add("readCheckBox");
-
-    const label = document.createElement("label");
-    label.htmlFor = "read ";
-    label.classList.add("readLabel");
-    label.appendChild(document.createTextNode("Read: "))
-
-    bookDiv.appendChild(label);
-    bookDiv.appendChild(readCheckBox);
-    setCheckBox(bookContainer, readCheckBox);
+    const readBtn = document.createElement("button");
+    readBtn.classList.add('readBtn')    
+    bookDiv.appendChild(readBtn);
+    if(bookContainer.read===false) {
+        readBtn.textContent = 'Not Read';
+        readBtn.style.backgroundColor = '#e04f63';
+    }else {
+        readBtn.textContent = 'Read';
+        readBtn.style.backgroundColor = '#63da63'
+    }
 
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "X";
@@ -82,14 +93,12 @@ function buildBook(bookContainer) {
         renderBook();
     });
 
-}
+    readBtn.addEventListener('click', () => { 
+        bookContainer.read = !bookContainer.read; 
+        saveLibrary(); 
+        renderBook();
+    }); 
 
-function setCheckBox(container, checkBox) {
-    if(container.read === true) {
-        checkBox.checked = true;
-    }else {
-        checkBox.checked = false;
-    }
 }
 
 function saveLibrary() {

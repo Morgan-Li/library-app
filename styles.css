@@ -30,11 +30,6 @@ h1 {
     margin: 0px 10px;
 }
 
-#readBox{
-    display: flex;
-    margin: 3px 10px 0px 10px;
-}
-
 #submit {
     display: flex;
     justify-content: center;
@@ -86,19 +81,32 @@ h1 {
     margin: 10px;
 }
 
-.readLabel {
-    font-size: 15px;
-}
-
 #removeBtn:hover {
     color: red;
     border-color: red;
+    cursor: pointer;
 }
 
 #removeBtn {
     font-size: 20px;
+    font-weight: bold;
     height: 40px;
     width: 40px;
     margin: 10px;
     border-radius: 50%;
+    border: none;
+}
+
+.readBtn {
+    border-radius: 10px;
+    border: solid black;
+    border-width: 1.5px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.readBtn:hover {
+    filter: brightness(90%);
+    cursor: pointer;
 }
