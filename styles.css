@@ -93,7 +93,7 @@ html, body {
 }
 
 #submitBtn:hover {
-    text-shadow: 0 0 3px white;
+    text-shadow: 0 0 4px white;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -158,11 +158,14 @@ html, body {
 #removeBtn {
     font-size: 20px;
     font-weight: bold;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    min-height: 30px;
     margin: 10px;
     border-radius: 50%;
     border: none;
+
 }
 
 .readBtn {
