@@ -5,21 +5,23 @@
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-    <h1> myLibrary </h1>
-    <form id="form" action="/script.js">
-        <div id="userInput">
-            <p><input type="text" id="title" name ="title" placeholder="Title"></p>
-            <p><input type="text" id="author" name ="author" placeholder="Author"></p>
-            <p><input type="text" id="pages" name ="pages" placeholder="Pages"></p>
-        </div>
+    <div id = "userBar"> 
+        <h1> myLibrary </h1>
+        <form id="form" action="/script.js">
+            <div id="userInput">
+                <p><input type="text" id="title" name ="title" placeholder="Title"></p>
+                <p><input type="text" id="author" name ="author" placeholder="Author"></p>
+                <p><input type="text" id="pages" name ="pages" placeholder="Pages"></p>
+            </div>
 
-        <div id="readBox"> 
-            <p><label>Read: </label> <input type="checkbox" id="read" name="read" value ="yes"></p>
-        </div>
-    </form>
+            <div id="readBox"> 
+                <p><label>Read: </label> <input type="checkbox" id="read" name="read" value ="yes"></p>
+            </div>
+        </form>
 
-    <div id="submit"> 
-    <button type="submit" form="form" id="submitBtn"> Submit </button>
+        <div id="submit"> 
+        <button type="submit" form="form" id="submitBtn"> Submit </button>
+        </div>
     </div>
 
     <div id="bookcase"></div>

@@ -81,12 +81,11 @@ function buildBook(bookContainer) {
     const readBtn = document.createElement("button");
     readBtn.classList.add('readBtn')    
     bookDiv.appendChild(readBtn);
+    readBtn.textContent = 'Read';
     if(bookContainer.read===false) {
-        readBtn.textContent = 'Not Read';
-        readBtn.style.backgroundColor = '#e04f63';
+        readBtn.style.backgroundColor = '#ea1111';
     }else {
-        readBtn.textContent = 'Read';
-        readBtn.style.backgroundColor = '#63da63'
+        readBtn.style.backgroundColor = '#4ed222'
     }
 
     const removeBtn = document.createElement("button");

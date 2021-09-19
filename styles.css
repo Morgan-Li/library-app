@@ -1,6 +1,25 @@
 h1 {
     display: flex;
     justify-content: center;
+    margin: 0;
+    color: white;
+}
+
+h1:hover {
+    text-shadow: 0px 0px 5px white;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(59, 59, 59);
+}
+
+#userBar {
+    background-color: #2b2b2b;
+    padding-top: 15px;
 }
 
 #userInput{
@@ -13,6 +32,11 @@ h1 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+}
+
+#readBox {
+    color: white;
+    font-weight: bolder;
 }
 
 #title{
@@ -35,13 +59,24 @@ h1 {
     justify-content: center;
     margin-bottom: 15px;
     border-bottom-color: black;
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
     border-bottom-style: solid;
     padding-bottom: 15px;
 }
 
 #submitBtn {
     font-weight: bold;
+    color: white;
+    background-color: #2b2b2b;
+    font-size: 18px;
+    text-decoration: underline;
+    text-shadow: 0 0 1px white;
+    border: none;
+}
+
+#submitBtn:hover {
+    text-shadow: 0 0 3px white;
+    cursor: pointer;
 }
 
 #bookcase {
@@ -58,25 +93,35 @@ h1 {
     width: 200px;
     padding: 10px;
     margin: 20px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
+    background-color: rgb(87, 87, 87);
 }
 
 .book:hover {
-    box-shadow: 0 0 1px 1px black;
+    box-shadow: 0 0 2px 2px black;
 }
 
 .title {
+    color: white;
+    padding: 2px;
+    text-align: center;
+    width: 90%;
     font-size: 20px;
     margin: 10px;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
 .author {
+    color: white;
     font-size: 20px;
     margin: 10px;
 }
 
 .pages {
+    color: white;
     font-size: 15px;
     margin: 10px;
 }
@@ -101,7 +146,7 @@ h1 {
     border-radius: 10px;
     border: solid black;
     border-width: 1.5px;
-    padding: 5px;
+    padding: 3px;
     font-size: 15px;
     font-weight: 100;
 }
