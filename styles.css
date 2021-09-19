@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
 h1 {
     display: flex;
     justify-content: center;
     margin: 0;
     color: white;
-    font-size: 36px;
+    font-size: 2.5rem;
 }
 
 h1 span:hover {
@@ -11,6 +13,7 @@ h1 span:hover {
 }
 
 html, body {
+    font-family: "Montserrat", sans-serif;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -83,10 +86,9 @@ html, body {
 }
 
 #submitBtn {
-    font-weight: bold;
     color: rgb(255, 255, 255);
     background-color: #2b2b2b;
-    font-size: 22px;
+    font-size: 1.5rem;
 
     text-shadow: 0 0 1px white;
     border: none;
