@@ -39,7 +39,7 @@ html, body {
 }
 
 #readBox {
-    margin-top: 4px;
+    margin-top: 2px;
     color: white;
     font-weight: bolder;
     font-size: 18px;
@@ -48,19 +48,19 @@ html, body {
 #title{
     display: flex;
     margin: 0px 10px;
-    padding: 5px 5px;
+    padding: 3px 3px;
 }
 
 #author{
     display: flex;
     margin: 0px 10px;
-    padding: 5px 5px;
+    padding: 3px 3px;
 }
 
 #pages{
     display: flex;
     margin: 0px 10px;
-    padding: 5px 5px;
+    padding: 3px 3px;
 }
 
 #submit {
