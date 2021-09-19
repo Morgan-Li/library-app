@@ -51,16 +51,28 @@ html, body {
     padding: 3px 3px;
 }
 
+#title:hover {
+    box-shadow: 0 0 1px 1px white;
+}
+
 #author{
     display: flex;
     margin: 0px 10px;
     padding: 3px 3px;
 }
 
+#author:hover {
+    box-shadow: 0 0 1px 1px white;
+}
+
 #pages{
     display: flex;
     margin: 0px 10px;
     padding: 3px 3px;
+}
+
+#pages:hover {
+    box-shadow: 0 0 1px 1px white;
 }
 
 #submit {
@@ -75,13 +87,14 @@ html, body {
     color: rgb(255, 255, 255);
     background-color: #2b2b2b;
     font-size: 22px;
-    text-decoration: underline;
+
     text-shadow: 0 0 1px white;
     border: none;
 }
 
 #submitBtn:hover {
     text-shadow: 0 0 3px white;
+    text-decoration: underline;
     cursor: pointer;
 }
 
@@ -124,12 +137,14 @@ html, body {
 
 .author {
     color: white;
+    text-align: center;
     font-size: 22px;
     margin: 10px;
 }
 
 .pages {
     color: white;
+    text-align: center;
     font-size: 18px;
     margin: 10px;
 }
